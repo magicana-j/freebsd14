@@ -2,7 +2,7 @@
 sleep 2
 echo Install Wayland.
 sleep 2
-sudo pkg install -y xorg wayland seatd xwayland alacritty dmenu-wayland dmenu pavucontrol alsa-utils waybar foot wofi mako thunar picom
+sudo pkg install -y xorg wayland seatd xwayland alacritty dmenu-wayland dmenu pavucontrol alsa-utils waybar foot rofi wofi mako thunar picom
 
 sleep 2
 echo Setting SystemControl.
