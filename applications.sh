@@ -2,7 +2,7 @@
 sleep 2
 echo Install Applications.
 sleep 2
-sudo pkg install -y firefox cava simplescreenrecorder handbrake libva-intel-driver libva-utils xdg-user-dirs openh264 zip unzip neofetch fastfetch networkmgr automount v4l-utils v4l_compat
+sudo pkg install -y firefox cava simplescreenrecorder handbrake libva-intel-driver libva-utils xdg-user-dirs openh264 zip unzip xarchiver neofetch fastfetch networkmgr automount v4l-utils v4l_compat
 
 sleep 2
 echo Install WebCam Applications.
