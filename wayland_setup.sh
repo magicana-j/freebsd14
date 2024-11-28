@@ -2,7 +2,7 @@
 sleep 2
 echo Install Wayland.
 sleep 2
-sudo pkg install -y wayland seatd xwayland alacritty dmenu-wayland dmenu pavucontrol alsa-utils waybar foot wofi mako thunar
+sudo pkg install -y wayland seatd xwayland alacritty dmenu-wayland dmenu pavucontrol alsa-utils waybar foot wofi mako thunar picom
 sleep 2
 echo Install Fonts and IME.
 sleep 2
