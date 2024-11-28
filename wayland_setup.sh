@@ -10,7 +10,7 @@ sudo pkg install -y xorg-fonts noto-basic noto-jp noto-emoji noto-extra fcitx5 f
 sleep 2
 echo Install Applications.
 sleep 2
-sudo pkg install -y cava simplescreenrecorder handbrake libva-intel-driver libva-utils xdg-user-dirs openh264 zip unzip neofetch fastfetch networkmgr automount v4l-utils v4l_compat
+sudo pkg install -y firefox cava simplescreenrecorder handbrake libva-intel-driver libva-utils xdg-user-dirs openh264 zip unzip neofetch fastfetch networkmgr automount v4l-utils v4l_compat
 
 sleep 2
 echo Install WebCam Applications.
