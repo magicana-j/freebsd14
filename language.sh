@@ -4,6 +4,7 @@ sleep 2
 echo Install Fonts and IME.
 sleep 2
 sudo pkg install -y xorg-fonts source-code-pro-ttf noto-jp noto-emoji noto-extra fcitx5 fcitx5-configtool ja-fcitx5-anthy
+fc-cache -fv
 
 cat << EOF >> ~/.xprofile
 export XMODIFIERS='@im=fcitx'
