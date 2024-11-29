@@ -1,4 +1,6 @@
 #!/bin/sh
+sudo pkg install -y vim nano neovim htop fastfetch
+sudo pkg install -y drm-kmod libva-intel-driver mesa-libs mesa-dri
 sleep 2
 echo Install Wayland.
 sleep 2
