@@ -1,7 +1,7 @@
 #!/bin/sh
 sudo pkg install -y vim nano neovim htop fastfetch
 sudo pkg install -y drm-kmod libva-intel-driver mesa-libs mesa-dri
-sudo pkg install -y pavucontrol alsa-utils
+sudo pkg install -y pavucontrol alsa-utils networkmgr
 
 echo Setting SystemControl.
 sleep 2
