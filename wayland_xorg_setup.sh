@@ -1,5 +1,5 @@
 #!/bin/sh
-sudo pkg install -y xorg wayland seatd xwayland alacritty dmenu-wayland dmenu waybar foot fuzzel wofi mako thunar thunar-archive-plugin picom
+sudo pkg install -y xorg wayland seatd xwayland-devel alacritty dmenu-wayland dmenu waybar foot fuzzel wofi mako thunar thunar-archive-plugin picom
 
 sleep 2
 echo Setting SystemControl.
