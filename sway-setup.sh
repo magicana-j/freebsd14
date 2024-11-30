@@ -1,6 +1,9 @@
 #!/bin/sh
 
-sudo pkg install -y sway swaybg swayidle swaylock-effects
+sudo pkg install -y sway swaybg swayidle waybar swaylock-effects
 
-mkdir -p ~/.config/sway
+if [ ! -d "~/.config/sway" ]; then
+  mkdir -p ~/.config/sway/config.d
+fi
+
 cp /usr/local/etc/sway/config ~/.config/sway/
