@@ -1,5 +1,6 @@
 #!/bin/sh
-sudo pkg install -y xorg wayland seatd xwayland \
+sudo pkg install xorg wayland
+sudo pkg install seatd xwayland \
   alacritty dmenu-wayland waybar foot fuzzel \
   mako thunar thunar-archive-plugin picom
 
