@@ -6,6 +6,6 @@ sudo pkg install -y pavucontrol alsa-utils networkmgr
 echo Setting SystemControl.
 sleep 2
 sudo sysrc kld_list+=i915kms
-sudo pw groupmod video -m user
+sudo pw groupmod video -m $USER
 sudo sysctl net.local.stream.recvspace=65536
 sudo sysctl net.local.stream.sendspace=65536
