@@ -2,10 +2,6 @@
 
 sudo pkg install niri waybar i3status swaybg swaylock swayidle mako fuzzel alacritty
 
-if [ ! -d "~/.config/niri" ]; then
-  mkdir -p ~/.config/niri
-fi
-
 if [ ! -d "~/.config/alacritty" ]; then
   mkdir -p ~/.config/alacritty
 fi
