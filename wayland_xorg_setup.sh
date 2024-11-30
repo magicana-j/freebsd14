@@ -4,7 +4,7 @@ sudo pkg install -y drm-kmod libva-intel-driver mesa-libs mesa-dri
 sleep 2
 echo Install Wayland.
 sleep 2
-sudo pkg install -y xorg wayland seatd xwayland alacritty dmenu-wayland dmenu pavucontrol alsa-utils waybar foot rofi wofi mako thunar thunar-archive-plugin picom
+sudo pkg install -y xorg wayland seatd xwayland alacritty dmenu-wayland dmenu pavucontrol alsa-utils waybar foot fuzzel wofi mako thunar thunar-archive-plugin picom
 
 sleep 2
 echo Setting SystemControl.
