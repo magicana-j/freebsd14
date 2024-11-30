@@ -6,5 +6,5 @@ EOF
 
 cat << EOF >> ~/.xinitrc
 setxkbmap -layout jp
-exec xfce4-session
+#exec xfce4-session
 EOF
