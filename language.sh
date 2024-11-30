@@ -12,4 +12,4 @@ export GTK_IM_MODULE=fcitx/xim
 export QT_IM_MODULE=fcitx
 EOF
 
-" mkdir -p ~/.config/autostart && cp /usr/share/applications/org.fcitx.Fcitx5.desktop ~/.config/autostart/
+echo "Execute--  mkdir -p ~/.config/autostart && cp /usr/share/applications/org.fcitx.Fcitx5.desktop ~/.config/autostart/
