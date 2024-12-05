@@ -3,7 +3,7 @@
 sudo pkg install wayland xwayland seatd xdg-desktop-portal-gtk \
   fuzzel foot alacritty nwg-drawer nwg-launchers \
   waybar swaybg swaylock waylock swayidle \
-  wf-recorder wl-clipboard wob wlogout obs-studio \
+  wf-recorder wl-clipboard wob wlogout obs-studio vlc \
   noto-jp fcitx5-im fcitx5-configtool ja-fcitx5-anthy \
   xbrightness pipewire pavucontrol wireplumber \
   firefox \
