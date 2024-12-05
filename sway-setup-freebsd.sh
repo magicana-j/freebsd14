@@ -3,10 +3,7 @@
 sudo pkg install wayland xwayland seatd xdg-desktop-portal-gtk \
   fuzzel foot alacritty nwg-drawer nwg-launchers \
   waybar swaybg swaylock waylock swayidle \
-  wf-recorder wl-clipboard wob wlogout obs-studio vlc \
-  noto-jp fcitx5-im fcitx5-configtool ja-fcitx5-anthy \
-  xbrightness pipewire pavucontrol wireplumber \
-  firefox \
-  gvfs fusefs-ntfs xdg-user-dirs \
-  xarchiver nemo nemo-fileroller mako volumeicon kanshi \
+  wf-recorder wl-clipboard wob wlogout xbrightness \
+  gvfs fusefs-ntfs \
+  xarchiver nemo mako volumeicon kanshi \
   sway
