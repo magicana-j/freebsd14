@@ -1,6 +1,6 @@
 #!/bin/sh
 
-sudo pkg install wayland xwayland seatd \
+sudo pkg install wayland xwayland seatd xdg-desktop-portal-gtk \
   fuzzel foot alacritty nwg-drawer nwg-launchers \
   waybar swaybg swaylock waylock swayidle \
   wf-recorder wl-clipboard wob wlogout obs-studio \
