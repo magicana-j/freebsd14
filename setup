@@ -1,8 +1,9 @@
 #!/bin/sh
 
 . ./basic-setup.sh
-. ./wayland_xorg_setup.sh
+. ./wayland-xorg-setup.sh
 . ./language.sh
+. ./desktop-setup.sh
 . ./applications.sh
 
 cp -r ./config/* ~/.config/
