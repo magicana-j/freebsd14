@@ -3,7 +3,7 @@
 . ./basic-setup.sh
 . ./xorg-setup.sh
 . ./language.sh
-. ./desktop-setup.sh
+. ./cinnamon-setup.sh
 . ./applications.sh
 
 cp -r ./config/* ~/.config/
