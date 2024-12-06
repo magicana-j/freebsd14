@@ -1,5 +1,5 @@
 #!/bin/sh
-sudo pkg install -y vim nano neovim htop gtop fastfetch
+sudo pkg install -y vim nano neovim htop fastfetch
 sudo pkg install -y drm-kmod libva-intel-driver mesa-libs mesa-dri libva-utils gpu-firmware-intel-kmod-kabylake
 sudo pkg install -y pipewire wireplumber pavucontrol alsa-utils networkmgr
 
