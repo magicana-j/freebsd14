@@ -6,6 +6,7 @@ sudo pkg xdg-desktop-portal-gtk xfce4-terminal \
   wf-recorder wl-clipboard wob wlogout xbrightness \
   gvfs fusefs-ntfs \
   xarchiver nemo mako volumeicon kanshi \
-  sway cinnamon lightdm lightdm-gtk-greeter
+  sway cinnamon sddm
 
-sudo sysrc lightdm_enable="YES"
+sudo sysrc sddm_enable="YES"
+sudo sysrc sddm_lang="en_GB"
