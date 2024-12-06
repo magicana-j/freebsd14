@@ -1,7 +1,7 @@
 #!/bin/sh
 
 . ./basic-setup.sh
-. ./wayland-xorg-setup.sh
+. ./xorg-setup.sh
 . ./language.sh
 . ./desktop-setup.sh
 . ./applications.sh
