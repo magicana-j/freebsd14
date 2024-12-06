@@ -1,0 +1,2 @@
+#!/bin/sh
+sudo pkg install bash bsddialog portconfig gperf flock py39-jinja2 py39-ply py39-html5lib node v4l_compat xcb-proto usbids libva mesa-dri qt5-core qt5-widgets os-generic-userland-devtools
