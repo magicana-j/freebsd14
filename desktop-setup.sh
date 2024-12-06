@@ -10,3 +10,5 @@ sudo pkg xdg-desktop-portal-gtk xfce4-terminal \
 
 sudo sysrc sddm_enable="YES"
 sudo sysrc sddm_lang="en_GB"
+
+echo 'setxkbmap -layout jp' >> ~/.xinitrc
