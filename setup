@@ -3,7 +3,9 @@
 . ./basic-setup.sh
 . ./xorg-setup.sh
 . ./language.sh
-. ./cinnamon-setup.sh
+. ./xfce4-setup.sh
+. ./displaymanager-setup.sh
 . ./applications.sh
 
+mkdir -p ~/.config
 cp -r ./config/* ~/.config/
