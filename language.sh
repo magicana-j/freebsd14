@@ -8,7 +8,7 @@ sudo pkg install -y noto-jp
 sudo pkg install -y fcitx5 fcitx5-configtool fcitx5-qt6 ja-fcitx5-anthy
 fc-cache -fv
 
-cat << EOF >> ~/.xprofile
+cat << EOF >> ~/.xinitrc
 export XMODIFIERS='@im=fcitx'
 export GTK_IM_MODULE=fcitx/xim
 export QT_IM_MODULE=fcitx
