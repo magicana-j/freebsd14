@@ -3,8 +3,8 @@
 . ./basic-setup.sh
 . ./xorg-setup.sh
 . ./language.sh
-. ./xfce4-setup.sh
-. ./displaymanager-setup.sh
+#. ./xfce4-setup.sh
+#. ./displaymanager-setup.sh
 . ./applications.sh
 
 mkdir -p ~/.config
