@@ -16,3 +16,6 @@ else
   cd /usr/ports/www/chromium
   sudo make install clean
 fi
+
+cd
+
