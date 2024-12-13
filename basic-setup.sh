@@ -12,3 +12,7 @@ sudo pw groupmod video -m $USER
 
 sudo sysctl net.local.stream.recvspace=65536
 sudo sysctl net.local.stream.sendspace=65536
+
+echo "Making user fonts folder."
+echo "=> ~/.local/share/fonts"
+mkdir -p ~/.local/share/fonts
