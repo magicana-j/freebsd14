@@ -9,6 +9,12 @@ sudo pkg install -y fcitx5 fcitx5-configtool fcitx5-gtk2 fcitx5-gtk3 fcitx5-gtk4
 fc-cache -fv
 
 cat << EOF >> ~/.xinitrc
+export LC_COLLATE="ja_JP.utf-8"
+export LC_CTYPE="ja_JP.utf-8"
+export LC_MONETARY="ja_JP.utf-8"
+export LC_NUMERIC="ja_JP.utf-8"
+export LC_TIME="ja_JP.utf-8"
+
 export XMODIFIERS='@im=fcitx'
 export GTK_IM_MODULE=fcitx/xim
 export QT_IM_MODULE=fcitx
