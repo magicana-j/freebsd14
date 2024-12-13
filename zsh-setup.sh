@@ -1,2 +1,2 @@
 #!/bin/sh
-sudo pkg install -y zsh
+sudo pkg install -y zsh zsh-completions
