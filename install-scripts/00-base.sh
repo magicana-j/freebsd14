@@ -34,43 +34,21 @@ fi
 
 install_package() {
     # Check if package is already installed
-    if pacman -Q "$1" &>/dev/null ; then
+    if pkg info -l "$1" &>/dev/null ; then
         echo -e "$1 is already installed. Skipping..."
     else
-        # Run pacman and redirect all output to a log file
+        # Run pkg install and redirect all output to a log file
         (
             stdbuf -oL sudo pkg install -y "$1" 2>&1
         ) >> "$LOG" 2>&1 &
         
         # Double check if package is installed
-        if pacman -Q "$1" &>/dev/null ; then
+        if pkg info -l "$1" &>/dev/null ; then
             echo -e "$1 has been successfully installed!"
         else
             echo -e "\n$1 failed to install. Please check the $LOG. You may need to install manually."
         fi
     fi
-}
-
-# Function for removing packages
-uninstall_package() {
-    local pkg="$1"
-
-    # Checking if package is installed
-    if pacman -Qi "$pkg" &>/dev/null; then
-        echo -e "Removing $pkg ..."
-        sudo pacman -R --noconfirm "$pkg" 2>&1 | tee -a "$LOG" | grep -v "error: target not found"
-
-        if ! pacman -Qi "$pkg" &>/dev/null; then
-            echo -e "$pkg removed."
-        else
-            echo -e "$pkg Removal failed. No actions required."
-            return 1
-        fi
-    else
-        echo -e "$pkg not installed, skipping."
-    fi
-    
-    return 0
 }
 
 # Set the name of the log file to include the current date and time
