@@ -28,7 +28,7 @@ echo 'Enabling lightdm...'
 sysrc lightdm_enable=YES
 wait 1
 
-pkg install -y x264 openh264 ffmpeg firefox shotwell shotcut gimp chromium geany zip unzip dosfstools exfatprogs ntfs-3g xarchiver
+pkg install -y x264 openh264 ffmpeg firefox shotwell shotcut gimp chromium geany zip unzip exfat-utils fusefs-exfat fusefs-ntfs xarchiver
 pkg install -y noto-emoji fcitx5 ja-fcitx5-anthy fcitx5-configtool
 
 echo 'Execute visudo to enable %wheel to sudo'
