@@ -25,7 +25,7 @@ sysrc lightdm_enable="YES"
 
 # Load Intel graphics driver (i915kms) at boot
 # Use += to append to existing kld_list if it exists
-sysrc kld_list+="/boot/modules/i915kms.ko"
+sysrc kld_list+="i915kms"
 
 # Configure procfs (required for Firefox)
 if ! grep -q "/proc" /etc/fstab; then
