@@ -9,7 +9,7 @@ echo "Starting Intel graphics driver installation..."
 # drm-kmod: Kernel modules for Intel/AMD graphics
 # libva-intel-driver: VA-API for older Intel GPUs
 # intel-media-driver: VA-API for modern Intel GPUs (Gen8+)
-pkg install -y drm-kmod
+pkg install -y xorg drm-kmod
 
 echo "Installing XFCE, Firefox, and Japanese environment..."
 
