@@ -3,33 +3,44 @@
 # User configuration
 YOUR_USER="your_username"
 
-echo "Starting package installation..."
+echo "Starting Intel graphics driver installation..."
 
-# Install XFCE, requested packages, and Japanese environment
-# ja-font-ipa: Japanese fonts
-# fcitx5, ja-fcitx5-anthy: Input method
+# Install Intel DRM drivers and hardware acceleration libraries
+# drm-kmod: Kernel modules for Intel/AMD graphics
+# libva-intel-driver: VA-API for older Intel GPUs
+# intel-media-driver: VA-API for modern Intel GPUs (Gen8+)
+pkg install -y drm-kmod libva-intel-driver intel-media-driver
+
+echo "Installing XFCE, Firefox, and Japanese environment..."
+
+# Combined installation of desktop and Japanese environment
 pkg install -y xfce xfce4-goodies pulseaudio firefox lightdm lightdm-gtk-greeter \
                ja-font-ipa fcitx5 fcitx5-configtool ja-fcitx5-anthy
 
-echo "Updating system configurations..."
+echo "Configuring system services and kernel modules..."
 
-# Enable necessary services
+# Enable DBus and LightDM
 sysrc dbus_enable="YES"
 sysrc lightdm_enable="YES"
 
-# Configure procfs mount (required for Firefox and certain desktop features)
+# Load Intel graphics driver (i915kms) at boot
+# Use += to append to existing kld_list if it exists
+sysrc kld_list+="/boot/modules/i915kms.ko"
+
+# Configure procfs (required for Firefox)
 if ! grep -q "/proc" /etc/fstab; then
     echo "proc           /proc       procfs  rw      0       0" >> /etc/fstab
     mount /proc
 fi
 
-# Add user to necessary groups
+# Add user to necessary groups for graphics and sound
+# video/render: Required for GPU access
 pw groupmod video -m $YOUR_USER
-pw groupmod wheel -m $YOUR_USER
+#pw groupmod render -m $YOUR_USER
+#pw groupmod wheel -m $YOUR_USER
 
-echo "Setting up user environment (including Japanese input settings)..."
+echo "Configuring user desktop environment..."
 
-# Create/update .xinitrc for the user
 XINIT_FILE="/home/$YOUR_USER/.xinitrc"
 
 cat <<EOF > $XINIT_FILE
@@ -49,4 +60,4 @@ EOF
 
 chown $YOUR_USER:$YOUR_USER $XINIT_FILE
 
-echo "Setup complete. Please reboot your system."
+echo "Setup complete. Please reboot your system to apply graphics settings."
