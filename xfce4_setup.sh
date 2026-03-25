@@ -15,7 +15,7 @@ echo "Installing XFCE, Firefox, and Japanese environment..."
 
 # Combined installation of desktop and Japanese environment
 pkg install -y xfce xfce4-goodies pulseaudio firefox lightdm lightdm-gtk-greeter \
-               ja-font-ipa fcitx5 fcitx5-configtool ja-fcitx5-anthy
+               ja-font-ipa fcitx5 fcitx5-gtk2 fcitx5-gtk3 fcitx5-gtk4 fcitx5-configtool ja-fcitx5-anthy
 
 echo "Configuring system services and kernel modules..."
 
@@ -47,12 +47,12 @@ cat <<EOF > $XINIT_FILE
 # Environment variables for Japanese input (Fcitx5)
 #export LANG=ja_JP.UTF-8
 #export LC_ALL=ja_JP.UTF-8
-export XMODIFIERS=@im=fcitx
+export XMODIFIERS='@im=fcitx'
 export GTK_IM_MODULE=fcitx
 export QT_IM_MODULE=fcitx
 
 # Start fcitx5 in background
-fcitx5 -d
+#fcitx5 -d
 
 # Start XFCE desktop environment
 #exec startxfce4
