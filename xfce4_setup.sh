@@ -14,7 +14,9 @@ pkg install -y xorg drm-kmod
 echo "Installing XFCE, Firefox, and Japanese environment..."
 
 # Combined installation of desktop and Japanese environment
-pkg install -y xfce xfce4-goodies pulseaudio firefox lightdm lightdm-gtk-greeter \
+pkg install -y xfce xfce4-goodies xfce4-pulseaudio-plugin \
+               pulseaudio firefox lightdm lightdm-gtk-greeter \
+               unzip exfat-utils htop neovim fastfetch \
                ja-font-ipa hack-font jetbrains-mono \
                fcitx5 fcitx5-gtk2 fcitx5-gtk3 fcitx5-gtk4 fcitx5-configtool ja-fcitx5-anthy
 
