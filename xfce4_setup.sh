@@ -15,7 +15,8 @@ echo "Installing XFCE, Firefox, and Japanese environment..."
 
 # Combined installation of desktop and Japanese environment
 pkg install -y xfce xfce4-goodies pulseaudio firefox lightdm lightdm-gtk-greeter \
-               ja-font-ipa fcitx5 fcitx5-gtk2 fcitx5-gtk3 fcitx5-gtk4 fcitx5-configtool ja-fcitx5-anthy
+               ja-font-ipa hack-font jetbrains-mono \
+               fcitx5 fcitx5-gtk2 fcitx5-gtk3 fcitx5-gtk4 fcitx5-configtool ja-fcitx5-anthy
 
 echo "Configuring system services and kernel modules..."
 
@@ -41,15 +42,16 @@ pw groupmod video -m $YOUR_USER
 
 echo "Configuring user desktop environment..."
 
-XINIT_FILE="/home/$YOUR_USER/.xinitrc"
+XPROF_FILE="/home/$YOUR_USER/.xprofile"
 
-cat <<EOF > $XINIT_FILE
+cat <<EOF > $XPROF_FILE
 # Environment variables for Japanese input (Fcitx5)
 #export LANG=ja_JP.UTF-8
 #export LC_ALL=ja_JP.UTF-8
 export XMODIFIERS='@im=fcitx'
 export GTK_IM_MODULE=fcitx
 export QT_IM_MODULE=fcitx
+export DefaultIMModule=fcitx5
 
 # Start fcitx5 in background
 #fcitx5 -d
@@ -58,6 +60,13 @@ export QT_IM_MODULE=fcitx
 #exec startxfce4
 EOF
 
-chown $YOUR_USER:$YOUR_USER $XINIT_FILE
+XINIT_FILE="/home/$YOUR_USER/.xprofile"
+
+cat <<EOF > $XPROF_FILE
+# Start fcitx5 in background
+fcitx5 -dr &
+EOF
+
+chown $YOUR_USER:$YOUR_USER $XINIT_FILE $XPROF_FILE
 
 echo "Setup complete. Please reboot your system to apply graphics settings."
